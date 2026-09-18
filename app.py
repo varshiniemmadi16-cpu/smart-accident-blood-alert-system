@@ -165,7 +165,7 @@ elif choice == t["menu_detection"]:
     st.header("🚨 Emergency Blood Request")
     uploaded_file = st.file_uploader(t["upload_image"], type=["jpg","png","jpeg"])
     if uploaded_file is not None:
-        st.image(uploaded_file, caption="Accident Image", use_column_width=True)
+        st.image(uploaded_file, caption="Accident Image", use_container_width=True)
         accident_detected = fake_accident_detection(uploaded_file)
         if accident_detected:
             st.error(t["accident_detected"])
