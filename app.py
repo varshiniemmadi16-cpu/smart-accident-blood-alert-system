@@ -9,8 +9,8 @@ from email.mime.text import MIMEText
 
 # ---------------- EMAIL FUNCTION ----------------
 def send_email_to_all(donor_emails, blood_needed, hospital, location, contact, patient_name):
-    sender_email = "varshiniemmadi16@gmail.com"
-    app_password = "roaxjvqiechfvjvm"
+    sender_email = st.secrets["sender_email"]
+    app_password = st.secrets["app_password"]
 
     subject = "🚨 Emergency Blood Requirement!"
     maps_link = f"https://www.google.com/maps/search/{location.replace(' ', '+')}"
